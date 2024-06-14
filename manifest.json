@@ -1,0 +1,11 @@
+{
+	"id": "definition-list",
+	"name": "Definition List",
+	"version": "0.1.0",
+	"minAppVersion": "0.15.0",
+	"description": "Adds definition list to the markdown parser.",
+	"author": "Steven Hammond",
+	"authorUrl": "https://obsidian.md",
+	"fundingUrl": "https://obsidian.md/pricing",
+	"isDesktopOnly": false
+}
