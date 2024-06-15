@@ -1,10 +1,10 @@
 {
 	"id": "definition-list",
 	"name": "Definition List",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"minAppVersion": "1.6.0",
 	"description": "Adds definition lists to the markdown parser.",
-	"author": "Steven Hammond",
+	"author": "shammond42",
 	"authorUrl": "https://northlandcreativewonders.com",
 	"fundingUrl": "https://buymeacoffee.com/ncwonders",
 	"isDesktopOnly": false
