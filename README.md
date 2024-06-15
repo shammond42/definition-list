@@ -6,7 +6,7 @@ At the moment only supports the reading view. It will support live preview in th
 
 ## Usage
 
-While definition lists are not part of the standard markdown definition, a number of varients have introduced it. This plugin has adopted the markup standard as described in the (Extended Syntax)[https://www.markdownguide.org/extended-syntax/]. The markup syntax looks like this.
+While definition lists are not part of the standard markdown definition, a number of varients have introduced it. This plugin has adopted the markup standard as described in the [Extended Syntax](https://www.markdownguide.org/extended-syntax/). The markup syntax looks like this.
 
 ```
 First Term
@@ -19,9 +19,9 @@ Third Term
 ```
 ## Styling
 
-Because definition lists are not part of the standard Obsidian markup, they are not recognized by any of the available themes. This plugin adds a couple bits of simply styline, but you will likely have to use (CSS Snippits)[https://help.obsidian.md/Extending+Obsidian/CSS+snippets] to style to match your themes.
+Because definition lists are not part of the standard Obsidian markup, they are not recognized by any of the available themes. This plugin adds a couple bits of simply styline, but you will likely have to use [CSS Snippits](https://help.obsidian.md/Extending+Obsidian/CSS+snippets) to style to match your themes.
 
-If you come up with some CSS that matches a popular theme please share it. I would like to build a collection of CSS samples others can use.
+If you come up with some CSS that matches a popular theme please share it by creating a [Github Issue](https://github.com/shammond42/definition-list/issues) on this project. I would like to build a collection of CSS samples others can use.
 
 ## Future Work
 
