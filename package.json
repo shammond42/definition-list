@@ -14,7 +14,7 @@
 	"dependencies": {
     "@codemirror/state": "^6.2.1",
     "@codemirror/view": "^6.17.0",
-    "obsidian": "^1.6.0"
+    "obsidian": "latest"
   },
 	"devDependencies": {
 		"@types/node": "^16.11.6",
