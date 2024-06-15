@@ -15,13 +15,9 @@ export default class DefinitionListPlugin extends Plugin {
 	settings: MyPluginSettings;
 
 	async onload() {
-		await this.loadSettings();
 		console.log('loading definition list plugin');
 		this.registerMarkdownPostProcessor((element, context) => {
-			// console.log(element);
       const paragraphs = element.findAll("p");
-			// console.log('registering post processor');
-			// debugger;
 
 			for (let paragraph of paragraphs) {
 				console.log(paragraph.innerHTML);
@@ -54,59 +50,12 @@ export default class DefinitionListPlugin extends Plugin {
 				}
 
 				paragraph.replaceWith(definitionList);
-		
-				// debugger;
-				// const text = textBlock.innerHTML;
-				// console.log(text);
-
 			}
-      // for (let codeblock of codeblocks) {
-      //   const text = codeblock.innerText.trim();
-      //   if (text[0] === ":" && text[text.length - 1] === ":") {
-      //     const emojiEl = codeblock.createSpan({
-      //       text: ALL_EMOJIS[text] ?? text,
-      //     });
-      //     codeblock.replaceWith(emojiEl);
-      //   }
-      // }
     });
 	}
 
 	onunload() {
-
-	}
-
-	async loadSettings() {
-		this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
-	}
-
-	async saveSettings() {
-		await this.saveData(this.settings);
+		// Placeholder
 	}
 }
 
-// class SampleSettingTab extends PluginSettingTab {
-// 	plugin: MyPlugin;
-
-// 	constructor(app: App, plugin: MyPlugin) {
-// 		super(app, plugin);
-// 		this.plugin = plugin;
-// 	}
-
-// 	display(): void {
-// 		const {containerEl} = this;
-
-// 		containerEl.empty();
-
-// 		new Setting(containerEl)
-// 			.setName('Setting #1')
-// 			.setDesc('It\'s a secret')
-// 			.addText(text => text
-// 				.setPlaceholder('Enter your secret')
-// 				.setValue(this.plugin.settings.mySetting)
-// 				.onChange(async (value) => {
-// 					this.plugin.settings.mySetting = value;
-// 					await this.plugin.saveSettings();
-// 				}));
-// 	}
-// }
