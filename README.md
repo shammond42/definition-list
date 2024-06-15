@@ -30,6 +30,7 @@ If you come up with some CSS that matches a popular theme please share it. I wou
 3. Settings to account for common alternatives
   -- dt's and dd's inline vs separate lines
   -- support alternate syntax options
+4. Use eslint and improve code quality
 
 ## Building from Source
 
