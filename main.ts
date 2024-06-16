@@ -7,7 +7,7 @@ export default class DefinitionListPlugin extends Plugin {
       const paragraphs = element.findAll("p");
 
 			for (let paragraph of paragraphs) {
-				const lines = paragraph.innerHTML.split('\n');
+				const lines = paragraph.innerText.split('\n');
 
 				let definitionList;
 				if(lines[1][0] === ':') { // Check to see if second line start with a colon
