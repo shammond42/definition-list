@@ -2,35 +2,52 @@
 
 This plugin adds HTML definition lists to Obsidian. It is in the very early stages of development, and quite a bit more is planned.
 
-At the moment only supports the reading view. It will support live preview in the future.
+It supports both reading view and live preview/source mode.
 
 ## Usage
 
-While definition lists are not part of the standard markdown definition, a number of varients have introduced it. This plugin has adopted the markup standard as described in the [Extended Syntax](https://www.markdownguide.org/extended-syntax/). The markup syntax looks like this.
+While definition lists are not part of the standard markdown definition, a number of varients have introduced it. This plugin has adopted the markup standard as described in the [Extended Syntax](https://www.markdownguide.org/extended-syntax/). It also implements a few features from [Pandoc's definition list spec](https://pandoc.org/MANUAL.html#definition-lists), specifically the support for tilde as a definition marker and definition lines indented with two spaces.
 
 ```
 First Term
-:First definition.
+: First definition.
+
 Second Term
-:Second definition
-:Alternate second definition.
-Third Term
-:Third definition
+~ Second definition
+~ Alternate second definition with _italics_ and [a link](https://example.com).
+
+Third Term, with _Italics_ and ==Highlighting==
+  : Third definition, indented
 ```
+
+Multiple definitions with line breaks between them are not fully supported. For example, the following is supported in Pandoc but will **not** render as 1 term with 2 definitions in reading mode. It does render in live preview, though.
+
+```
+This is an example term
+: this is the first definition
+
+: this is another definition.
+```
+
+### Unsupported Definition List Mark-up
+
+- Multi-line terms
+- Multi-line/paragraph definitions
+- Definition lists nested inside definitions
+- Ordered & unordered lists nested inside definitions
+
 ## Styling
 
-Because definition lists are not part of the standard Obsidian markup, they are not recognized by any of the available themes. This plugin adds a couple bits of simply styline, but you will likely have to use [CSS Snippits](https://help.obsidian.md/Extending+Obsidian/CSS+snippets) to style to match your themes.
+Because definition lists are not part of the standard Obsidian markup, they are not recognized by any of the available themes. This plugin adds a couple bits of simple styling, but you will likely have to use [CSS Snippits](https://help.obsidian.md/Extending+Obsidian/CSS+snippets) to style to match your themes.
 
 If you come up with some CSS that matches a popular theme please share it by creating a [Github Issue](https://github.com/shammond42/definition-list/issues) on this project. I would like to build a collection of CSS samples others can use.
 
 ## Future Work
 
-1. Support live preview mode
-2. Build a collection of sample CSS snippits
-3. Settings to account for common alternatives
-  -- dt's and dd's inline vs separate lines
-  -- support alternate syntax options
-4. Use eslint and improve code quality
+1. Build a collection of sample CSS snippits
+1. Settings to account for common alternatives
+    - dt's and dd's inline vs separate lines
+1. Use eslint and improve code quality
 
 ## Building from Source
 
@@ -38,13 +55,13 @@ Clone this repository inside the Obsidian Vault:
 
 ```
 $ cd .obsidian/plugins/
-$ git clone https://github.com/otaviocc/obsidian-microblog
+$ git clone https://github.com/shammond42/definition-list
 ```
 
 Resolve the plugin dependencies and build it:
 
 ```
-$ cd obsidian-microblog
+$ cd definition-list
 $ npm i
 $ npm run build
 ```
