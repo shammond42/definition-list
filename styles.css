@@ -1,21 +1,31 @@
+/* reading mode */
 dl dt {
   font-weight: bold;
 }
 
-.definition-list-dt {
+/* live preview */
+.dl-dt {
   font-weight: bold;
 }
 
-.definition-list-dd-margin {
+.dl-dd-reg {
   display: inline-block;
-  margin-inline-start: 40px; /* Adjust as needed */
+  width: calc(100% - 40px);
+  padding-left: 40px !important;
+  /* to add space between definitions, must use padding */
+  /* padding-bottom: 0.75em !important; */
 }
 
-.definition-list-dd-content {
-  display: inline;
+.dl-dd-indent {
+  display: inline-block;
+  width: calc(100% - 40px);
+  padding-left: 40px !important;
+  text-indent: 0px !important;
+  /* to add space between definitions, must use padding */
+  /* padding-bottom: 0.75em !important; */
 }
 
-.definition-list-hidden-marker {
+.dl-hidden-marker {
   display: inline-block;
   overflow: hidden;
   height: 0;
