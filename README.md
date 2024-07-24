@@ -4,6 +4,10 @@ This plugin adds HTML definition lists to Obsidian. It is in the very early stag
 
 It supports both reading view and live preview/source mode.
 
+## Credit
+
+Special thanks to [@lucible](https://github.com/lucible) who, at this point, has contributed more to this project than I have. Thank you!
+
 ## Usage
 
 While definition lists are not part of the standard markdown definition, a number of varients have introduced it. This plugin has adopted the markup standard as described in the [Extended Syntax](https://www.markdownguide.org/extended-syntax/). It also implements a few features from [Pandoc's definition list spec](https://pandoc.org/MANUAL.html#definition-lists), specifically the support for tilde as a definition marker and definition lines indented with two spaces.
