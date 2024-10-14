@@ -3,24 +3,24 @@ dl dt {
   font-weight: bold;
 }
 
+dl dd P
+	margin-inline-start: var(--list-indent);
+
 /* live preview */
 .dl-dt {
   font-weight: bold;
 }
 
-.dl-dd-reg {
-  display: inline-block;
-  width: calc(100% - 40px);
-  padding-left: 40px !important;
+.markdown-source-view.mod-cm6 .cm-line.dl-dd-reg,
+.markdown-source-view.mod-cm6 .cm-line.dl-dd-indent
+{
+  padding-inline-start: var(--list-indent);
   /* to add space between definitions, must use padding */
   /* padding-bottom: 0.75em !important; */
 }
 
-.dl-dd-indent {
-  display: inline-block;
-  width: calc(100% - 40px);
-  padding-left: 40px !important;
-  text-indent: 0px !important;
+.markdown-source-view.mod-cm6 .cm-line.dl-dd-indent {
+  text-indent: 0px;
   /* to add space between definitions, must use padding */
   /* padding-bottom: 0.75em !important; */
 }
