@@ -1,33 +1,29 @@
 /* reading mode */
 dl dt {
   font-weight: bold;
+  padding-block-start: var(--list-spacing);
+}
+
+dd {
+  margin-inline-start: var(--list-indent);
+  padding-block-end: var(--list-spacing);
 }
 
 /* live preview */
 .dl-dt {
   font-weight: bold;
+  padding-block-start: var(--list-spacing);
 }
 
-.dl-dd-reg {
-  display: inline-block;
-  width: calc(100% - 40px);
-  padding-left: 40px !important;
-  /* to add space between definitions, must use padding */
-  /* padding-bottom: 0.75em !important; */
+.markdown-source-view.mod-cm6 .cm-line.dl-dd-reg, .markdown-source-view.mod-cm6 .cm-line.dl-dd-indent {
+  padding-inline-start: var(--list-indent-editing);
+  padding-block-end: var(--list-spacing); /* to add space between definitions, must use padding */
 }
 
-.dl-dd-indent {
-  display: inline-block;
-  width: calc(100% - 40px);
-  padding-left: 40px !important;
-  text-indent: 0px !important;
-  /* to add space between definitions, must use padding */
-  /* padding-bottom: 0.75em !important; */
+.markdown-source-view.mod-cm6 .cm-line.dl-dd-indent {
+  text-indent: 0;
 }
 
 .dl-hidden-marker {
-  display: inline-block;
-  overflow: hidden;
-  height: 0;
-  width: 0;
+  display: none;
 }
