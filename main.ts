@@ -58,7 +58,7 @@ const definitionListPlugin = ViewPlugin.fromClass(class {
             const lineText = line.text;
             const trimmedLineText = lineText.trim();
     
-            if (trimmedLineText === CODE_BLOCK_DELIMITER) {
+            if (trimmedLineText.startsWith(CODE_BLOCK_DELIMITER)) {
                 inCodeBlock = !inCodeBlock;
                 lastLineWasTerm = false;
                 lastLineWasDefinition = false;
