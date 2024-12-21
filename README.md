@@ -6,7 +6,9 @@ It supports both reading view and live preview/source mode.
 
 ## Credit
 
-Special thanks to [@lucible](https://github.com/lucible) who, at this point, has contributed more to this project than I have. Thank you!
+Special thanks to [@lucible](https://github.com/lucible) who, at this point, has contributed more to this project than I have. Thank you! Additionally, thanks go to the following contributors:
+
+- @lfuhr
 
 ## Usage
 
@@ -31,6 +33,15 @@ This is an example term
 : this is the first definition
 
 : this is another definition.
+```
+
+### Strict Line Breaks
+
+If you use strict line breaks, you need to use a '\' at the end of lines as follows.
+
+```
+Definition term \
+: Definition definition
 ```
 
 ### Unsupported Definition List Mark-up
