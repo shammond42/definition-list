@@ -7,6 +7,8 @@ dl dt {
 dd {
   margin-inline-start: var(--list-indent);
   padding-block-end: var(--list-spacing);
+  padding-left: 1em;
+  margin-left: 0;
 }
 
 /* live preview */
@@ -26,4 +28,9 @@ dd {
 
 .dl-hidden-marker {
   display: none;
+}
+
+dl {
+  margin: 0;
+  padding: 0;
 }

@@ -135,6 +135,7 @@ const definitionListPlugin = ViewPlugin.fromClass(class {
 
 export default class DefinitionListPlugin extends Plugin {
     async onload(): Promise<void> {
+        console.log("Definition List Plugin loaded");
         // Register the post processor for reading mode
         this.registerMarkdownPostProcessor(this.definitionListPostProcessor);
 
@@ -158,7 +159,7 @@ export default class DefinitionListPlugin extends Plugin {
                 content.startsWith('^') // Link reference
             );
         }
-    
+        console.log("Post processor running");
         const paragraphs = element.querySelectorAll("p");
     
         paragraphs.forEach((paragraph) => {
@@ -200,12 +201,12 @@ export default class DefinitionListPlugin extends Plugin {
                         invalidateCurrentPair = false;
                     }
                 } else if (isNextLineDefinition && !isNotTerm(line) && !invalidateCurrentPair) {
-                    if (currentTerm) {
-                        newContent.push(currentTerm + '<br>');
-                    }
+                    // if (currentTerm) {
+                    //     newContent.push(currentTerm + '<br>');
+                    // }
                     currentTerm = line;
                     dl = null;
-                } else {
+                } else {                 
                     if (currentTerm) {
                         newContent.push(currentTerm + '<br>');
                         currentTerm = null;
