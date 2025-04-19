@@ -1,7 +1,7 @@
 {
 	"id": "definition-list",
 	"name": "Definition List",
-	"version": "0.2.2",
+	"version": "0.2.3",
 	"minAppVersion": "1.6.0",
 	"description": "Adds definition lists to the markdown parser.",
 	"author": "shammond42",
