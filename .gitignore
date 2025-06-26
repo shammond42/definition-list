@@ -1,5 +1,5 @@
 # vscode
-.vscode 
+.vscode
 
 # Intellij
 *.iml
@@ -17,6 +17,9 @@ main.js
 
 # obsidian
 data.json
+
+test-vault/**/.obsidian/workspace.json
+!test-vault/**/main.js
 
 # Exclude macOS Finder (System Explorer) View States
 .DS_Store

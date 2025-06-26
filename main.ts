@@ -1,4 +1,4 @@
-import { Plugin, MarkdownPostProcessor } from 'obsidian';
+import { Plugin, MarkdownPostProcessor, MarkdownView } from 'obsidian';
 import { EditorView, ViewUpdate, ViewPlugin, DecorationSet, Decoration } from '@codemirror/view';
 import { RangeSetBuilder } from '@codemirror/state';
 
@@ -145,6 +145,9 @@ export default class DefinitionListPlugin extends Plugin {
 
     // Post-processor for handling definition lists in reading mode
     definitionListPostProcessor: MarkdownPostProcessor = (element: HTMLElement): void => {
+        const activeView = this.app.workspace.getActiveViewOfType(MarkdownView);
+        if (!activeView || activeView.getMode() === "source") return;
+
         function isNotTerm(content: string): boolean {
             return (
                 content.match(/^#+\s/) !== null || // Heading
