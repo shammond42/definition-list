@@ -1,6 +1,6 @@
 {
 	"name": "definition-list",
-	"version": "0.2.3",
+	"version": "0.2.5",
 	"description": "Adds definition lists to the markdown parser.",
 	"main": "main.js",
 	"scripts": {
